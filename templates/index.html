@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
+</head>
+<body>
+
+<h1>Form</h1>
+
+
+<form action="/" method="post">
+    <label>Action: </label>
+    <input type="text" name="action">
+    <br>
+    <label>Comedy: </label>
+    <input type="text" name="comedy">
+    <br>
+    <label>Romance: </label>
+    <input type="text" name="romance">
+    <br>
+    <label>Adventure: </label>
+    <input type="text" name="adventure">
+    <br>
+    <button type="submit">Submit</button>
+    <button type="reset" name="reset">Clear</button>
+</form>
+<h1>{{"You might like this: "}}</h1>
+<br>
+<img src="{{url_for('static', filename='images/'+ firstname)}}">
+</body>
+</html>
