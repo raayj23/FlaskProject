@@ -10,7 +10,7 @@
 <h1>AniPlus</h1>
 
 
-<form action="/" method="post">
+<form action="/recommend" method="post">
     <label>Action: </label>
     <input type="text" name="action">
     <br>
@@ -26,8 +26,5 @@
     <button type="submit">Submit</button>
     <button type="reset" name="reset">Clear</button>
 </form>
-<h1>{{"You might like this: "}}</h1>
-<br>
-<img src="{{url_for('static', filename='images/'+ firstname)}}">
 </body>
 </html>

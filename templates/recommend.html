@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{"You might like this: "}}</h1>
+<br>
+<img src="{{url_for('static', filename='images/'+ firstname)}}">
+<br>
+<form action="/" method="post">
+    <label>You want to change?</label>
+    <button type="submit">Yes</button>
+    <button type="reset" name="reset" href="/recommend">No</button>
+</form>
+</body>
+</html>

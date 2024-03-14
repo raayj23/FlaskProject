@@ -11,9 +11,9 @@ model.fit(x.values ,y)
 
 app = Flask(__name__)
 
-@app.route("/", methods=["POST","GET"])
+@app.route("/recommend", methods=["POST"])
 
-def home():
+def recommend():
     action = 0
     comedy = 0
     romance = 0
@@ -31,8 +31,11 @@ def home():
         adventure = Aadventure
 
     predicted_value = model.predict([[action, comedy, romance, adventure]])
+    return render_template("recommend.html", firstname=predicted_value[0])
 
-    return render_template("index.html" ,firstname=predicted_value[0])
+@app.route("/", methods=["POST","GET"])
+def home():
+    return render_template("index.html")
 
 
 if __name__ == "__main__":
