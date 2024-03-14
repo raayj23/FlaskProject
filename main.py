@@ -31,7 +31,7 @@ def recommend():
         adventure = Aadventure
 
     predicted_value = model.predict([[action, comedy, romance, adventure]])
-    return render_template("recommend.html", firstname=predicted_value[0])
+    return render_template("recommend.html", predicted=predicted_value[0])
 
 @app.route("/", methods=["POST","GET"])
 def home():

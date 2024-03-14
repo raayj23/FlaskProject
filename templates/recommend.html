@@ -7,12 +7,12 @@
 <body>
 <h1>{{"You might like this: "}}</h1>
 <br>
-<img src="{{url_for('static', filename='images/'+ firstname)}}">
+<img src="{{url_for('static', filename='images/'+ predicted)}}">
 <br>
 <form action="/" method="post">
     <label>You want to change?</label>
     <button type="submit">Yes</button>
-    <button type="reset" name="reset" href="/recommend">No</button>
+    <button type="reset" name="reset">No</button>
 </form>
 </body>
 </html>
