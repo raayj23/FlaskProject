@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='design.css') }}">
 </head>
 <body>
 <h1>{{"You might like this: "}}</h1>
 <br>
-<img src="{{url_for('static', filename='images/'+ predicted)}}">
+<img class="image" src="{{url_for('static', filename='images/'+ predicted)}}">
 <br>
 <form action="/" method="post">
     <label>You want to change?</label>
