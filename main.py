@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 def recommend():
     action = 0
-    comedy = 0
+    sport = 0
     romance = 0
     adventure = 0
 
