@@ -6,7 +6,7 @@ data = pandas.read_csv("animeList.csv")
 x = data.drop(columns=["movie"])
 y = data["movie"]
 model = DecisionTreeClassifier()
-model.fit(x.values ,y)
+model.fit(x.values, y)
 
 
 app = Flask(__name__)
@@ -21,16 +21,16 @@ def recommend():
 
     if request.method == "POST":
         Aaction = request.form["action"]
-        Ccomedy = request.form["comedy"]
+        Ssport = request.form["sport"]
         Rromance = request.form["romance"]
         Aadventure = request.form["adventure"]
 
         action = Aaction
-        comedy = Ccomedy
+        sport = Ssport
         romance = Rromance
         adventure = Aadventure
 
-    predicted_value = model.predict([[action, comedy, romance, adventure]])
+    predicted_value = model.predict([[action, sport, romance, adventure]])
     return render_template("recommend.html", predicted=predicted_value[0])
 
 @app.route("/", methods=["POST","GET"])
